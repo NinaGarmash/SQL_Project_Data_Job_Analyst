@@ -1,0 +1,23 @@
+
+SELECT
+    job_title_short,
+    job_posted_date AS date_time,
+FROM job_postings_fact
+LIMIT 5;
+
+SELECT
+    job_title_short,
+    job_posted_date :: DATE,
+    EXTRACT(MONTH FROM job_posted_date) AS month,
+    EXTRACT(YEAR FROM job_posted_date) AS year
+FROM job_postings_fact
+LIMIT 5;
+
+SELECT 
+    job_title_short,
+    job_posted_date AS date_time,
+    job_posted_date AT TIME ZONE 'UTC' AT TIME ZONE 'EST'
+FROM job_postings_fact
+LIMIT 5;
+
+

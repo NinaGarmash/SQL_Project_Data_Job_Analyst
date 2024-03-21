@@ -1,0 +1,97 @@
+select job_schedule_type, 
+avg(salary_year_avg) as avg_year_salary,
+avg (salary_hour_avg) as avg_hour_salary
+from job_postings_fact
+where job_posted_date::date   > '2023-06-01' 
+group BY job_schedule_type 
+
+select extract(month from (job_posted_date AT time zone 'UTC' AT TIME ZONE 'EST')) AS month,
+count(job_id)
+from job_postings_fact
+where job_posted_date::date   >='2023-01-01' 
+group BY month 
+order BY month; 
+
+select c.name as company_name
+from job_postings_fact jp
+left join company_dim c
+on jp.company_id = c.company_id
+where job_health_insurance IS TRUE
+and extract(quarter from job_posted_date) = 2
+AND extract(year from job_posted_date) = '2023'
+
+
+CREATE Table january_jobs AS
+select *
+from job_postings_fact
+where extract (month from job_posted_date) = 1;
+
+
+-- Create table for February jobs
+CREATE TABLE february_jobs AS
+SELECT *
+FROM job_postings_fact
+WHERE EXTRACT(month FROM job_posted_date) = 2;
+
+-- Create table for March jobs
+CREATE TABLE march_jobs AS
+SELECT *
+FROM job_postings_fact
+WHERE EXTRACT(month FROM job_posted_date) = 3;
+
+select * from march_jobs 
+limit 2
+
+SELECT skills
+FROM skills_dim 
+WHERE skill_id in (
+    select skill_id 
+    from (
+    SELECT skill_id,
+    count (*) as times_mentioned
+    FROM skills_job_dim
+    GROUP BY skill_id
+    ORDER BY times_mentioned desc
+    LIMIT 5) AS top_5_skills)
+
+WITH company_jobs_count AS (
+    SELECT company_id, 
+COUNT (*) AS  total_jobs
+FROM job_postings_fact
+GROUP BY company_id)
+
+SELECT cd.name, 
+CASE WHEN total_jobs <10 THEN 'Small'
+ WHEN total_jobs BETWEEN 10 AND 50 THEN 'Medium'
+ WHEN total_jobs > 50 THEN 'LARGE' END AS company_size
+FROM company_dim cd LEFT JOIN company_jobs_count cjc
+ON cd.company_id = cjc.company_id
+
+SELECT jp.job_id,
+sj.skill_id,
+skills
+FROM job_postings_fact jp
+LEFT JOIN skills_job_dim sj ON jp. job_id = sj.job_id
+LEFT JOIN skills_dim s
+ON sj. skill_id = s.skill_id
+WHERE jp.salary_rate > '70000'
+AND EXTRACT(quarter FROM jp.job_posted_date) = 1
+
+SELECT 
+job_location, 
+job_via,
+job_posted_date::DATE,
+salary_year_avg
+FROM (
+SELECT * 
+FROM january_jobs 
+UNION ALL
+SELECT * 
+FROM february_jobs
+UNION ALL
+SELECT * 
+FROM march_jobs
+) as quarter1_job_postings
+WHERE quarter1_job_postings. salary_year_avg > 70000
+AND quarter1_job_postings.job_title_short = 'Data Analyst'
+ORDER BY 4 desc;
