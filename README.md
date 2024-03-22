@@ -327,7 +327,7 @@ Here's a breakdown of the most optimal skills for Data Analysts in 2023:
 - **High-Demand Programming Languages**: Python and R stand out for their high demand, with demand counts of 236 and 148 respectively. Despite their high demand, their average salaries are around $101,397 for Python and $100,499 for R, indicating that proficiency in these languages is highly valued but also widely available.
 - **Cloud Tools and Technologies**: Skills in specialized technologies such as Snowflake, Azure, AWS, and BigQuery show significant demand with relatively high average salaries, pointing towards the growing importance of cloud platforms and big data technologies in data analysis.
 - **Business Intelligence and Visualization Tools**: Tableau and Looker, with demand counts of 230 and 49 respectively, and average salaries around $99,288 and $103,795, highlight the critical role of data visualization and business intelligence in deriving actionable insights from data.
-Database Technologies: - **The demand for skills in traditional and NoSQL databases** (Oracle, SQL Server, NoSQL) with average salaries ranging from $97,786 to $104,534, reflects the enduring need for data storage, retrieval, and management expertise.
+- **Database Technologies**: The demand for skills in traditional and NoSQL databases (Oracle, SQL Server, NoSQL) with average salaries ranging from $97,786 to $104,534, reflects the enduring need for data storage, retrieval, and management expertise.
 
 In Israel there are only 8 resulting optimal skills which are both  high_paying and in high demand, 
 among them sql, python and tableau are repeated most often. 
@@ -348,8 +348,11 @@ Throughout this adventure, I've turbocharged my SQL toolkit with some serious fi
 From the analysis, several general insights emerged:
 
 1.**Top-Paying Data Analyst Jobs**: The highest-paying jobs for data analysts that allow remote work offer a wide range of salaries, the highest at $650,000! In Israel the salary seiling for data analysts is lower - $111,175.
+
 2.**Skills for Top-Paying Jobs**: High-paying data analyst jobs require advanced proficiency in SQL, suggesting it’s a critical skill for earning a top salary.
+
 3.**Most In-Demand Skills**: SQL is also the most demanded skill in the data analyst job market, thus making it essential for job seekers.
+
 4.**Skills with Higher Salaries**: Specialized skills, such as SVN and Solidity, are associated with the highest average salaries, indicating a premium on niche expertise. They are absent in Top-10 paying skills for Israeli onsight data analyst. The absence of specialized skills  in the top-paying skills for Israeli onsite data analysts could be due to naming specificity and the nature of job roles in the Israeli market.
 
 In many cases, specialized skills like SVN and Solidity may be more commonly associated with data engineering or data science roles rather than traditional data analyst roles. Therefore, it's possible that these skills are in higher demand and command higher salaries in those roles compared to data analyst positions.
@@ -360,4 +363,4 @@ Additionally, the Israeli job market may have unique characteristics and specifi
 
 ### Closing Thoughts
 
-This project enhanced my SQL skills and provided valuable insights into the data analyst job market and reveals the distinction between remote positions and onsight Israely market. The findings from the analysis serve as a guide to prioritizing skill development and job search efforts. Aspiring data analysts can better position themselves in a competitive job market by focusing on high-demand, high-salary skills. This exploration highlights the importance of continuous learning and adaptation to emerging trends in the field of data analytics.
+This project enhanced my SQL skills and provided valuable insights into the data analyst job market and reveals the distinction between remote positions and onsite Israeli market. The findings from the analysis serve as a guide to prioritizing skill development and job search efforts. Aspiring data analysts can better position themselves in a competitive job market by focusing on high-demand, high-salary skills. This exploration highlights the importance of continuous learning and adaptation to emerging trends in the field of data analytics.
