@@ -99,7 +99,7 @@ HAVING
 ORDER BY
     avg_salary DESC,
     demand_count DESC
-LIMIT 25;
+LIMIT 10;
 
 /*
 Here's a breakdown of the most optimal skills for Data Analysts in 2023: 

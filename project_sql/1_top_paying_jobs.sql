@@ -25,7 +25,7 @@ ORDER BY
     salary_year_avg DESC
 LIMIT 10;
 
-
+- for jobs in Israel
 SELECT	
 	job_id,
 	job_title,
