@@ -78,7 +78,7 @@ LIMIT 10;
 
 Here's the breakdown of the top data analyst jobs in 2023:
 
-- **Wide Salary Range**: Top 10 paying data analyst roles span from $184,000 to $650,000 for **remote** positions, indicating significant salary potential in the field. In **Israel** salary range is a lot narrower:  $111,175 - 105,000, with 9 of the 10 companies having the same average yearly salary.
+- **Wide Salary Range**: Top 10 paying data analyst roles span from $184,000 to $650,000 for **remote** positions, indicating significant salary potential in the field. In **Israel** salary range is a lot narrower:  $105,000 - 111,175, with 9 of the 10 companies having the same average yearly salary.
 - **Diverse Employers**: a) Companies like SmartAsset, Meta, and AT&T are among those offering high salaries, showing a broad interest across different industries.b) In Israel companies like Armis Security, AppsFlyer, At-Bay, Similarweb,Riskified, BigID, Wix, Wolt offer top-10 most paying jobs.
 - **Job Title Variety**: There's a high diversity in job titles, from Data Analyst to Director of Analytics, reflecting varied roles and specializations within data analytics.
 
@@ -189,12 +189,14 @@ Here's the breakdown of the most demanded skills for data analysts in 2023
 
 a) Remote jobs
 
-| Skills  | Demand Count |
-|---------|--------------|
-| SQL     | 7291         |
-| Excel   | 4611         |
-| Python  | 4330         |
-| Tableau | 3745         |
+| Skills   | Demand Count |
+|----------|--------------|
+| sql      | 7291         |
+| excel    | 4611         |
+| python   | 4330         |
+| tableau  | 3745         |
+| power bi | 2609         |
+
 
 b) In Israel
 
